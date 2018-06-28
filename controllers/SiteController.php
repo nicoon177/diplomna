@@ -53,20 +53,4 @@ class SiteController
         
     }
     
-//    Виклик сторінки про магазин
-    public function actionAbout ()
-    {
-        
-        require_once(ROOT . '/views/site/about.php');
-        return true;
-    }
-    
-    public function actionSearch()
-    {
-        $searched = Product::getSearchedProducts();
-        
-        require_once(ROOT . '/views/site/search.php');
-        
-        return true;
-    }
 }

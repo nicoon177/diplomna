@@ -106,7 +106,7 @@ class CartController
 
                 if ($result) {               
                     $adminEmail = 'nicoon177@gmail.com';
-                    $message = '<a href="http://digital-mafia.net/admin/orders">Список замовленнь</a>';
+                    $message = '<a href="http://crowdme.com/admin/orders">Список замовленнь</a>';
                     $subject = 'Нове замовлення!';
                     mail($adminEmail, $subject, $message);
 

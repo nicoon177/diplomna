@@ -21,7 +21,7 @@
 
             <div class="col-lg-6 col-lg-offset-4">
                 <div class="login-form">
-                    <form action="#" method="post" >
+                    <form action="/admin/product/update/<?php echo $product['id']; ?>" method="post" enctype="multipart/form-data">
 
                         <p>Назвва товара</p>
                         <input class="input-editor-all" type="text" name="name" placeholder="" value="<?php echo $product['name']; ?>">

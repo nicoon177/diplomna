@@ -9,14 +9,23 @@ class User
     {
         $db = Db::getConnection();
         
-        $sql = 'INSERT INTO user (name, email, password) VALUES (:name, :email, :password)';
+        $sql = 'INSERT INTO user (name, email, password, role) VALUES (:name, :email, :password, :role)';
+        $role = 'user';
         
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
-        
-        return $result->execute();
+        $result->bindParam(':password', $password, PDO::PARAM_INT);
+        $result->bindParam(':role', $role, PDO::PARAM_STR);
+  
+        if ($result->execute()) {
+            return self::checkUserData($email, $password);
+        } else {
+            return false;
+        }
+        /*$result->execute();
+        $result->debugDumpParams();
+        var_dump($result->errorInfo());*/
     }
     
 //    Перевірка даних користувача
@@ -65,7 +74,7 @@ class User
         return true;
     }
     
-//    Отриманн користувача по ID
+//    Отримання користувача по ID
     public static function getUserById($id)
     {
         if ($id) {

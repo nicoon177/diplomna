@@ -24,7 +24,7 @@
 				</div>
 				<div class="col-md-4 amet-sed">
 					<h4>Пропозиція</h4>
-                    <p><a class="button-for-enter" href="user/login/">Увійдіть</a> <br> для кращого користування сайтом</p>
+                    <p>Увійдіть<br> для кращого користування сайтом</p>
 					
 				</div>
 				<div class="clearfix"> </div>

@@ -37,7 +37,11 @@ class UserController
             }
             
             if($errors == false) {
-                $result = User::register($name, $email, $password);
+                $userid = User::register($name, $email, $password);
+                if ($userid) {
+                    User::auth($userid);
+                    header("Location: /cabinet/"); exit;
+                }
             }
             
         }

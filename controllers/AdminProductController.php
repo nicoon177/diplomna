@@ -86,7 +86,7 @@ class AdminProductController extends AdminBase
         $categoriesList = Category::getCategoriesListAdmin();
         
         $product = Product::getProductById($id);
-
+        
         if (isset($_POST['submit'])) {
 
             $options['name'] = $_POST['name'];
@@ -99,6 +99,8 @@ class AdminProductController extends AdminBase
             $options['is_new'] = $_POST['is_new'];
             $options['is_recommended'] = $_POST['is_recommended'];
             $options['status'] = $_POST['status'];
+            
+//            var_dump(Product::updateProductById($id, $options)); exit;
 
             if (Product::updateProductById($id, $options)) {
                 

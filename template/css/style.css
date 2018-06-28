@@ -2647,3 +2647,7 @@ a.item_add p.number {
 .admin-log-out:hover{
     color: orange;
 }
+.admin-container{
+    display: flex;
+    justify-content: space-between;
+}

@@ -2,7 +2,7 @@
 
 <div class="contact">
 	<div class="container">
-		<h1>Contact</h1>
+		<h1>Контакти</h1>
 			<div class="contact-form">
 				<div class="col-md-8 contact-grid">
                     <?php if ($result): ?>
@@ -21,7 +21,7 @@
 						<input type="text" placeholder="Email" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Email';}" name="userEmail" value="<?php echo $userEmail?>">
 						<textarea cols="77" rows="6" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}" name="userText" value="<?php echo $userText?>">Повідомлення</textarea>
 						<div class="send">
-							<input type="submit" value="Send">
+							<input type="submit" value="Відправити">
 						</div>
 					</form>
 

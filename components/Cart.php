@@ -45,7 +45,7 @@ class Cart
         
     }
     
-//    Відображення продуктів
+//    Відображення продуктів при наявності
     public static function getProducts()
     {
         if(isset($_SESSION['products'])) {
